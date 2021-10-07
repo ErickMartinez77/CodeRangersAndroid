@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuItemProfile"
+        android:icon="@drawable/icons8_configuraci_n_del_administrador_96"
+        android:title="@string/mainPageMenuItemProfileLabel" />
+    <item
+        android:id="@+id/menuItemFeed"
+        android:icon="@drawable/icons8_reception_256"
+        android:title="@string/mainPageMenuItemFeedLabel" />
+    <item
+        android:id="@+id/menuItemStore"
+        android:icon="@drawable/icons8_tienda_100"
+        android:title="@string/mainPageMenuStoreLabel" />
+</menu>
