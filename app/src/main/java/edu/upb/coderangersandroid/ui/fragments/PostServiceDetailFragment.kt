@@ -28,8 +28,8 @@ class PostServiceDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val serviceImage = view.findViewById<ImageView>(R.id.serviceImageDetail)
-        val serviceNameText = view.findViewById<TextView>(R.id.serviceOwnerNameDetail)
-        val serviceDescriptionText = view.findViewById<TextView>(R.id.serviceOwnerNameDetail)
+        val serviceOwnerNameText = view.findViewById<TextView>(R.id.serviceOwnerNameDetail)
+        val serviceDescriptionText = view.findViewById<TextView>(R.id.serviceNameDetail)
 
         post = arguments?.getSerializable("post") as Post?
 
@@ -38,8 +38,8 @@ class PostServiceDetailFragment : Fragment() {
                 .load(it.imageUrl)
                 .transform(RoundedCorners(14))
                 .into(serviceImage)
-            serviceNameText.text = it.publisher
-            serviceDescriptionText.text = it.shortDescription
+            serviceOwnerNameText.text = it.ownerName
+            serviceDescriptionText.text = it.publisher
         }
 
     }
