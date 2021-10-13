@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.upb.coderangersandroid">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeRangersAndroid">
+        <activity
+            android:name=".ui.activities.ItemMainPageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.MainPageActivity"
+            android:exported="true" />
         <activity
             android:name=".ui.activities.InitialActivity"
             android:exported="true">
@@ -19,12 +27,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activities.ProfileActivity"
-            android:exported="true">
-        </activity>
-        <activity
             android:name=".ui.activities.LoginActivity"
-            android:exported="true"/>
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.ProfileActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

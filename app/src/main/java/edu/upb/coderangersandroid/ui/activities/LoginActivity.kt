@@ -17,7 +17,7 @@ class LoginActivity: AppCompatActivity()  {
         btSignUpFacebook = findViewById(R.id.imageFacebook);
         supportActionBar?.hide()
         btSignUpFacebook.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java)
+            val intent = Intent(this, MainPageActivity::class.java)
            startActivity(intent)
         }
     }

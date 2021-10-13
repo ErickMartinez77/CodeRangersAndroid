@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import edu.upb.coderangersandroid.R
 
 class InitialActivity : AppCompatActivity() {
@@ -13,7 +14,7 @@ class InitialActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
