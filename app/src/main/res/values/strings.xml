@@ -5,4 +5,6 @@
     <string name="mainPageMenuItemProfileLabel">Profile</string>
     <string name="mainPageMenuItemFeedLabel">Home</string>
     <string name="mainPageMenuStoreLabel">Store</string>
+    <string name="serviceDescriptionItemFeedLabel">serviceDescription</string>
+    <string name="serviceNameItemFeedLabel">serviceName</string>
 </resources>

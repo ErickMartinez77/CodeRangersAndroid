@@ -35,6 +35,6 @@ class MainPageActivity : AppCompatActivity() {
             }
             true
         }
+        bottonNavigationView.selectedItemId = R.id.menuItemFeed
     }
-
 }

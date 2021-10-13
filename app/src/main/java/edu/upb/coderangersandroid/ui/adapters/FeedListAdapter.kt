@@ -2,11 +2,15 @@ package edu.upb.coderangersandroid.ui.adapters
 
 import android.media.Image
 import android.view.LayoutInflater
+import android.view.RoundedCorner
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.model.Post
 
@@ -33,13 +37,17 @@ class FeedListAdapter : RecyclerView.Adapter<FeedListAdapter.FeedListViewHolder>
         return elementList.size
     }
 
-    class FeedListViewHolder( val itemView: View ): RecyclerView.ViewHolder(itemView){
+    class FeedListViewHolder( itemView: View ): RecyclerView.ViewHolder(itemView){
         private val serviceImage = itemView.findViewById<ImageView>(R.id.serviceImage)
         private val serviceNameText = itemView.findViewById<TextView>(R.id.serviceNameText)
         private val serviceDescriptionText = itemView.findViewById<TextView>(R.id.serviceDescriptionText)
         fun bind(post: Post){
+            Glide.with(itemView)
+                .load(post.imageUrl)
+                .transform(RoundedCorners(14))
+                .into(serviceImage)
             serviceNameText.text = post.publisher
-            serviceDescriptionText.text = post.publisher
+            serviceDescriptionText.text = post.shortDescription
         }
     }
 

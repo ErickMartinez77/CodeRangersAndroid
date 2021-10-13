@@ -7,27 +7,27 @@ object TempDataSource {
         Post(
             publisher = "Plomer" ,
             shortDescription = "Plomero con 5 años de experiencia en construcciones de edificios y casas",
-            imageUrl = ""
+            imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfrCpMwWuUX7RQ9faN1IGzuRlnSFInU75oNg&usqp=CAU"
         ),
         Post(
             publisher = "Mecanico" ,
             shortDescription = "Se arregla cualquier tipo de automóvil, tanto caja mecánica como automática ",
-            imageUrl = ""
+            imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxuisYgMzkRXLWAHEGr0nv1JRa_Xc9XeSVJA&usqp=CAU"
         ),
         Post(
             publisher = "Pintor" ,
             shortDescription = "Se pinta dormitorios, cocinas, hasta Fachadas externas",
-            imageUrl = ""
+            imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf0_jpp2Q_YqBzpGYmfC7NqGTFEs3qni2OKg&usqp=CAU"
         ),
         Post(
             publisher = "Servicio Técnico de Celulares" ,
             shortDescription = "Se arreglan celulares android y Ios",
-            imageUrl = ""
+            imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9UPPb129gDteN5FtcoXbUWWXjByYVnhAKsg&usqp=CAU"
         ),
         Post(
             publisher = "Jardinero" ,
             shortDescription = "Superviso las plantas de su jardin así como los espacios verdes",
-            imageUrl = ""
+            imageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw0nk5mw8CWiieHqekvsl_bttQhDcVWy6goQ&usqp=CAU"
         )
     )
 }
