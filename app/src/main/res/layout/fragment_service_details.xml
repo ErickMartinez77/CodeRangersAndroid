@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
     android:background="@color/background">
 
-    <View
+    <ImageView
         android:id="@+id/serviceImageDetail"
         android:layout_width="0dp"
         android:layout_height="200dp"
@@ -35,42 +37,46 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/serviceOwnerNameDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        tools:text="Mauricio Ayllon"
+        android:layout_marginTop="28dp"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        tools:text="Mauricio Ayllon" />
 
     <TextView
         android:id="@+id/serviceNameDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        tools:text="Pintor"
+        android:layout_marginBottom="388dp"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        tools:text="Pintor" />
 
     <TextView
         android:id="@+id/AddressDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Achumani, La Paz, Bolivia"
+        android:layout_marginTop="12dp"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/serviceNameDetail" />
+        app:layout_constraintTop_toBottomOf="@+id/serviceNameDetail"
+        tools:text="Achumani, La Paz, Bolivia" />
 
     <View
         android:id="@+id/view3"

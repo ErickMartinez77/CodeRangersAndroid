@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.data.TempDataSource
+import edu.upb.coderangersandroid.model.Post
 import edu.upb.coderangersandroid.ui.adapters.FeedListAdapter
+import edu.upb.coderangersandroid.ui.interfaces.OnFeedItemClickListener
 
 
 class FeedFragment : Fragment() {
@@ -29,6 +31,19 @@ class FeedFragment : Fragment() {
         recyclerView.adapter = feedListAdapter
         recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         feedListAdapter.addAll(TempDataSource.postList)
+
+        feedListAdapter.setOnFeedItemClickListener{
+            val fragment = PostServiceDetailFragment().apply {
+                arguments = Bundle().apply {
+                    putSerializable("post", it)
+                }
+            }
+
+            val ft = parentFragmentManager.beginTransaction()
+            ft.add(R.id.container,fragment)
+            ft.addToBackStack("Test")
+            ft.commit()
+        }
 
     }
 
