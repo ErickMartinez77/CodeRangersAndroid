@@ -5,13 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.data.TempDataSource
-import edu.upb.coderangersandroid.model.Post
 import edu.upb.coderangersandroid.ui.adapters.FeedListAdapter
-import edu.upb.coderangersandroid.ui.interfaces.OnFeedItemClickListener
 
 
 class FeedFragment : Fragment() {
@@ -33,16 +32,8 @@ class FeedFragment : Fragment() {
         feedListAdapter.addAll(TempDataSource.postList)
 
         feedListAdapter.setOnFeedItemClickListener{
-            val fragment = PostServiceDetailFragment().apply {
-                arguments = Bundle().apply {
-                    putSerializable("post", it)
-                }
-            }
-
-            val ft = parentFragmentManager.beginTransaction()
-            ft.add(R.id.container,fragment)
-            ft.addToBackStack("Test")
-            ft.commit()
+            val directions = FeedFragmentDirections.actionGoToPostServiceDetail(it)
+            findNavController().navigate(directions)
         }
 
     }
