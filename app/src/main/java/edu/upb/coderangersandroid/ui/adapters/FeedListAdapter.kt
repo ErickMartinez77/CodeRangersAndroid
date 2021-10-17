@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import edu.upb.coderangersandroid.R
+import edu.upb.coderangersandroid.databinding.ListItemFeedBinding
 import edu.upb.coderangersandroid.model.Post
 import edu.upb.coderangersandroid.ui.interfaces.OnFeedItemClickListener
 
@@ -28,13 +29,13 @@ class FeedListAdapter : RecyclerView.Adapter<FeedListAdapter.FeedListViewHolder>
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeedListViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_item_feed, parent, false)
-        return FeedListViewHolder(view)
+        val binding = ListItemFeedBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return FeedListViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: FeedListViewHolder, position: Int) {
         holder.bind(elementList[position])
-        holder.itemView.setOnClickListener{
+        holder.binding.root.setOnClickListener{
             onFeedItemClickListener?.invoke(elementList[position])
         }
     }
@@ -43,17 +44,14 @@ class FeedListAdapter : RecyclerView.Adapter<FeedListAdapter.FeedListViewHolder>
         return elementList.size
     }
 
-    class FeedListViewHolder( itemView: View ): RecyclerView.ViewHolder(itemView){
-        private val serviceImage = itemView.findViewById<ImageView>(R.id.serviceImage)
-        private val serviceNameText = itemView.findViewById<TextView>(R.id.serviceNameText)
-        private val serviceDescriptionText = itemView.findViewById<TextView>(R.id.serviceDescriptionText)
+    class FeedListViewHolder(val binding: ListItemFeedBinding ): RecyclerView.ViewHolder(binding.root){
         fun bind(post: Post){
             Glide.with(itemView)
                 .load(post.imageUrl)
                 .transform(RoundedCorners(14))
-                .into(serviceImage)
-            serviceNameText.text = post.publisher
-            serviceDescriptionText.text = post.shortDescription
+                .into(binding.serviceImage)
+            binding.serviceNameText.text = post.publisher
+            binding.serviceDescriptionText.text = post.shortDescription
         }
     }
 

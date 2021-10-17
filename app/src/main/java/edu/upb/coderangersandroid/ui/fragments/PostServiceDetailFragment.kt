@@ -11,11 +11,13 @@ import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import edu.upb.coderangersandroid.R
+import edu.upb.coderangersandroid.databinding.FragmentServiceDetailsBinding
 import edu.upb.coderangersandroid.model.Post
 import edu.upb.coderangersandroid.ui.adapters.FeedListAdapter
 
 
 class PostServiceDetailFragment : Fragment() {
+    private lateinit var binding: FragmentServiceDetailsBinding
     lateinit var post: Post
     val args: PostServiceDetailFragmentArgs by navArgs()
 
@@ -24,20 +26,17 @@ class PostServiceDetailFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_service_details, container, false)
+        binding = FragmentServiceDetailsBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val serviceImage = view.findViewById<ImageView>(R.id.serviceImageDetail)
-        val serviceOwnerNameText = view.findViewById<TextView>(R.id.serviceOwnerNameDetail)
-        val serviceDescriptionText = view.findViewById<TextView>(R.id.serviceNameDetail)
-
         post = args.post
         Glide.with(view)
             .load(post.imageUrl)
             .transform(RoundedCorners(14))
-            .into(serviceImage)
-        serviceOwnerNameText.text = post.ownerName
-        serviceDescriptionText.text = post.publisher
+            .into(binding.serviceImageDetail)
+        binding.serviceOwnerNameDetail.text = post.ownerName
+        binding.serviceNameDetail.text = post.publisher
     }
 }

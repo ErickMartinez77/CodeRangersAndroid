@@ -4,7 +4,7 @@ plugins {
     id 'androidx.navigation.safeargs.kotlin'
 }
 
-android {
+ android {
     compileSdk 31
 
     defaultConfig {
@@ -27,6 +27,12 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildFeatures{
+        viewBinding true
+        dataBinding true
+    }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
