@@ -22,7 +22,7 @@ class MainPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_page)
 
-
+        supportActionBar?.hide()
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
 
