@@ -7,49 +7,45 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import edu.upb.coderangersandroid.R
+import edu.upb.coderangersandroid.databinding.FragmentServiceDetailsBinding
 import edu.upb.coderangersandroid.model.Post
 import edu.upb.coderangersandroid.ui.adapters.FeedListAdapter
 
 
 class PostServiceDetailFragment : Fragment() {
-    var post: Post? = null
-    private val feedListAdapter = FeedListAdapter()
+    private lateinit var binding: FragmentServiceDetailsBinding
+    lateinit var post: Post
+    val args: PostServiceDetailFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_service_details, container, false)
+        binding = FragmentServiceDetailsBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val serviceImage = view.findViewById<ImageView>(R.id.serviceImageDetail)
-        val serviceOwnerNameText = view.findViewById<TextView>(R.id.serviceOwnerNameDetail)
-        val serviceNameDetailText = view.findViewById<TextView>(R.id.serviceNameDetail)
-        val description = view.findViewById<TextView>(R.id.tvDescription)
-        val phoneNumberDetail = view.findViewById<TextView>(R.id.PhoneNumberDetail)
-        val serviceBackButton = view.findViewById<ImageView>(R.id.backButton)
+        post = args.post
+        Glide.with(view)
+            .load(post.imageUrl)
+            .transform(RoundedCorners(14))
+            .into(binding.serviceImageDetail)
+        binding.serviceOwnerNameDetail.text = post.ownerName
+        binding.serviceNameDetail.text = post.publisher
+        binding.tvDescription.text = post.shortDescription
+        binding.PhoneNumberDetail.text = post.phone.toString()
 
-        post = arguments?.getSerializable("post") as Post?
-
-        post?.let {
-            Glide.with(view)
-                .load(it.imageUrl)
-                .transform(RoundedCorners(14))
-                .into(serviceImage)
-            serviceOwnerNameText.text = it.ownerName
-            serviceNameDetailText.text = it.publisher
-            description.text = it.shortDescription
-            phoneNumberDetail.text = it.phone.toString()
+        binding.backButton.setOnClickListener{
+            findNavController().popBackStack()
         }
 
-        serviceBackButton.setOnClickListener{
-            parentFragmentManager.popBackStack()
-        }
     }
 }
