@@ -3,7 +3,7 @@ package edu.upb.coderangersandroid.data
 import edu.upb.coderangersandroid.model.Post
 
 object TempDataSource {
-    val postList = mutableListOf<Post>(
+    private var postList = mutableListOf<Post>(
         Post(
             publisher = "Plomer" ,
             shortDescription = "Plomero con 5 años de experiencia en construcciones de edificios y casas",
@@ -35,4 +35,12 @@ object TempDataSource {
             ownerName = "Kavin Pomier"
         )
     )
+
+    fun getPostList(): List<Post>{
+        return postList
+    }
+
+    fun setPostList(postList: List<Post>){
+        this.postList = postList.toMutableList()
+    }
 }
