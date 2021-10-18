@@ -7,9 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.request.RequestOptions
 import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.databinding.FragmentServiceDetailsBinding
 import edu.upb.coderangersandroid.model.Post
@@ -38,5 +40,12 @@ class PostServiceDetailFragment : Fragment() {
             .into(binding.serviceImageDetail)
         binding.serviceOwnerNameDetail.text = post.ownerName
         binding.serviceNameDetail.text = post.publisher
+        binding.tvDescription.text = post.shortDescription
+        binding.PhoneNumberDetail.text = post.phone.toString()
+
+        binding.backButton.setOnClickListener{
+            findNavController().popBackStack()
+        }
+
     }
 }

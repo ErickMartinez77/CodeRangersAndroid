@@ -22,6 +22,8 @@ class MainPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_page)
 
+
+
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_cont) as NavHostFragment
