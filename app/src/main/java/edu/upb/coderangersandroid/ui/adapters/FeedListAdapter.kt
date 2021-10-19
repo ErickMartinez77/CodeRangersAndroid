@@ -18,7 +18,7 @@ class FeedListAdapter : RecyclerView.Adapter<FeedListAdapter.FeedListViewHolder>
     private var elementList: MutableList<Post> = mutableListOf()
     private var onFeedItemClickListener: ((post: Post)-> Unit)?= null
 
-    fun addAll( newElementList: MutableList<Post> ){
+    fun addAll( newElementList: List<Post> ){
         elementList.clear()
         elementList.addAll(newElementList)
         notifyDataSetChanged()
@@ -46,12 +46,7 @@ class FeedListAdapter : RecyclerView.Adapter<FeedListAdapter.FeedListViewHolder>
 
     class FeedListViewHolder(val binding: ListItemFeedBinding ): RecyclerView.ViewHolder(binding.root){
         fun bind(post: Post){
-            Glide.with(itemView)
-                .load(post.imageUrl)
-                .transform(RoundedCorners(14))
-                .into(binding.serviceImage)
-            binding.serviceNameText.text = post.publisher
-            binding.serviceDescriptionText.text = post.shortDescription
+            binding.post = post
         }
     }
 
