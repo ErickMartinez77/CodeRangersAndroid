@@ -10,15 +10,27 @@ import edu.upb.coderangersandroid.ui.mainpage.MainPageActivity
 
 class LoginActivity: AppCompatActivity()  {
     lateinit var btSignUpFacebook : View;
+    lateinit var btSignUpGoogle : View;
+    lateinit var btSignUpTwitter : View;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(activity_login)
         btSignUpFacebook = findViewById(R.id.imageFacebook);
+        btSignUpTwitter = findViewById(R.id.imageView6);
+        btSignUpGoogle = findViewById(R.id.imageView7);
         supportActionBar?.hide()
         btSignUpFacebook.setOnClickListener {
             val intent = Intent(this, MainPageActivity::class.java)
-           startActivity(intent)
+            startActivity(intent)
+        }
+        btSignUpGoogle.setOnClickListener {
+            val intent = Intent(this, MainPageActivity::class.java)
+            startActivity(intent)
+        }
+        btSignUpTwitter.setOnClickListener {
+            val intent = Intent(this, MainPageActivity::class.java)
+            startActivity(intent)
         }
     }
 }
