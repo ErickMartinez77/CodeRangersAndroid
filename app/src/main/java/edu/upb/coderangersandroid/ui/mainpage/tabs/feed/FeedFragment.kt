@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui.fragments
+package edu.upb.coderangersandroid.ui.mainpage.tabs.feed
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,12 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import edu.upb.coderangersandroid.R
-import edu.upb.coderangersandroid.data.TempDataSource
 import edu.upb.coderangersandroid.databinding.FragmentFeedBinding
-import edu.upb.coderangersandroid.ui.adapters.FeedListAdapter
-import edu.upb.coderangersandroid.ui.viewmodels.PostViewModel
 
 
 class FeedFragment : Fragment() {

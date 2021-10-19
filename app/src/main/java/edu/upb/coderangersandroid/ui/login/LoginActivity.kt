@@ -1,12 +1,12 @@
-package edu.upb.coderangersandroid.ui.activities
+package edu.upb.coderangersandroid.ui.login
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.R.layout.activity_login
+import edu.upb.coderangersandroid.ui.mainpage.MainPageActivity
 
 class LoginActivity: AppCompatActivity()  {
     lateinit var btSignUpFacebook : View;

@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui.viewmodels
+package edu.upb.coderangersandroid.ui.mainpage.tabs.feed
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

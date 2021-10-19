@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui.fragments
+package edu.upb.coderangersandroid.ui.mainpage.tabs.feed.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,7 +1,6 @@
-package edu.upb.coderangersandroid.ui.adapters
+package edu.upb.coderangersandroid.ui.mainpage.tabs.store
 
 import android.view.LayoutInflater
-import android.view.RoundedCorner
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide

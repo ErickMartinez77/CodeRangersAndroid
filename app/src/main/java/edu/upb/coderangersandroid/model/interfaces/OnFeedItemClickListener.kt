@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui.interfaces
+package edu.upb.coderangersandroid.model.interfaces
 
 import edu.upb.coderangersandroid.model.Post
 

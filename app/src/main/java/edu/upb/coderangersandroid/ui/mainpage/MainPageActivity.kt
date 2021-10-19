@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui.activities
+package edu.upb.coderangersandroid.ui.mainpage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,9 +6,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import edu.upb.coderangersandroid.R
-import edu.upb.coderangersandroid.ui.fragments.FeedFragment
-import edu.upb.coderangersandroid.ui.fragments.ProfileFragment
-import edu.upb.coderangersandroid.ui.fragments.StoreFragment
+import edu.upb.coderangersandroid.ui.mainpage.tabs.feed.FeedFragment
+import edu.upb.coderangersandroid.ui.mainpage.tabs.ProfileFragment
+import edu.upb.coderangersandroid.ui.mainpage.tabs.StoreFragment
 
 class MainPageActivity : AppCompatActivity() {
 

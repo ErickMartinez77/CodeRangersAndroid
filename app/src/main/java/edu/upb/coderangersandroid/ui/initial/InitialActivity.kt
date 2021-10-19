@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui.activities
+package edu.upb.coderangersandroid.ui.initial
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import edu.upb.coderangersandroid.R
+import edu.upb.coderangersandroid.ui.login.LoginActivity
 
 class InitialActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

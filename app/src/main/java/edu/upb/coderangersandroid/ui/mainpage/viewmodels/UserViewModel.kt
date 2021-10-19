@@ -1,10 +1,9 @@
-package edu.upb.coderangersandroid.ui.viewmodels
+package edu.upb.coderangersandroid.ui.mainpage.viewmodels
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import edu.upb.coderangersandroid.data.UserDataSource
 import edu.upb.coderangersandroid.model.User
-import kotlin.concurrent.fixedRateTimer
 
 class UserViewModel: ViewModel() {
     val user = MutableLiveData<User>(UserDataSource.getUser())

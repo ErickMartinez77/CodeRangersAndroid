@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui.fragments
+package edu.upb.coderangersandroid.ui.login.fragments
 
 
 import android.os.Bundle

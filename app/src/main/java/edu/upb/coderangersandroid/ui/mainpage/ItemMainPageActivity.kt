@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui.activities
+package edu.upb.coderangersandroid.ui.mainpage
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

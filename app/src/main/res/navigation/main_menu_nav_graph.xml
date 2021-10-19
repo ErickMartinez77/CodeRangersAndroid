@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/feedFragment"
-        android:name="edu.upb.coderangersandroid.ui.fragments.FeedFragment"
+        android:name="edu.upb.coderangersandroid.ui.mainpage.tabs.feed.FeedFragment"
         android:label="FeedFragment"
         tools:layout="@layout/fragment_feed">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/postServiceDetailFragment"
-        android:name="edu.upb.coderangersandroid.ui.fragments.PostServiceDetailFragment"
+        android:name="edu.upb.coderangersandroid.ui.mainpage.tabs.feed.fragments.PostServiceDetailFragment"
         android:label="PostServiceDetailFragment"
         tools:layout="@layout/fragment_service_details">
         <argument
@@ -25,12 +25,12 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="edu.upb.coderangersandroid.ui.fragments.ProfileFragment"
+        android:name="edu.upb.coderangersandroid.ui.mainpage.tabs.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/storeFragment"
-        android:name="edu.upb.coderangersandroid.ui.fragments.StoreFragment"
+        android:name="edu.upb.coderangersandroid.ui.mainpage.tabs.StoreFragment"
         android:label="fragment_store"
         tools:layout="@layout/fragment_store" />
 </navigation>

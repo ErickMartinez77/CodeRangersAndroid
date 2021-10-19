@@ -1,17 +1,10 @@
-package edu.upb.coderangersandroid.ui.adapters
+package edu.upb.coderangersandroid.ui.mainpage.tabs.feed
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.databinding.ListItemFeedBinding
 import edu.upb.coderangersandroid.model.Post
-import edu.upb.coderangersandroid.ui.interfaces.OnFeedItemClickListener
 
 
 class FeedListAdapter : RecyclerView.Adapter<FeedListAdapter.FeedListViewHolder>() {

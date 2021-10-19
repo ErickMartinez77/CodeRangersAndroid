@@ -7,10 +7,10 @@
         <import type="android.view.View"/>
         <variable
             name="profileViewModel"
-            type="edu.upb.coderangersandroid.ui.viewmodels.ProfileViewModel" />
+            type="edu.upb.coderangersandroid.ui.mainpage.tabs.profile.ProfileViewModel" />
         <variable
             name="userViewModel"
-            type="edu.upb.coderangersandroid.ui.viewmodels.UserViewModel" />
+            type="edu.upb.coderangersandroid.ui.mainpage.viewmodels.UserViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

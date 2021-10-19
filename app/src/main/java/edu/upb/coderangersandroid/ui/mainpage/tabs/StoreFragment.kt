@@ -1,18 +1,14 @@
-package edu.upb.coderangersandroid.ui.fragments
+package edu.upb.coderangersandroid.ui.mainpage.tabs
 
 import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
-import android.widget.LinearLayout
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.data.StoreDataSource
 import edu.upb.coderangersandroid.databinding.FragmentStoreBinding
-import edu.upb.coderangersandroid.ui.adapters.StoreListAdapter
+import edu.upb.coderangersandroid.ui.mainpage.tabs.store.StoreListAdapter
 
 class StoreFragment: Fragment() {
 

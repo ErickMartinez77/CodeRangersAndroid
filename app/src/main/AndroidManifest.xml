@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeRangersAndroid">
         <activity
-            android:name=".ui.activities.ItemMainPageActivity"
+            android:name=".ui.mainpage.ItemMainPageActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.activities.MainPageActivity"
+            android:name=".ui.mainpage.MainPageActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.activities.InitialActivity"
+            android:name=".ui.initial.InitialActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activities.LoginActivity"
+            android:name=".ui.login.LoginActivity"
             android:exported="true" />
     </application>
 
