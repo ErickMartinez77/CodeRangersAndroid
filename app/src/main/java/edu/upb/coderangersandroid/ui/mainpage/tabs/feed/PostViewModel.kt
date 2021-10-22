@@ -9,3 +9,4 @@ import edu.upb.coderangersandroid.model.User
 class PostViewModel: ViewModel() {
     val post = MutableLiveData(TempDataSource.getPostList())
 }
+

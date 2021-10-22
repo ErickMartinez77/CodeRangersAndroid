@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui.mainpage.tabs
+package edu.upb.coderangersandroid.ui.mainpage.tabs.profile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import edu.upb.coderangersandroid.databinding.FragmentProfileBinding
-import edu.upb.coderangersandroid.ui.mainpage.tabs.profile.ProfileViewModel
 import edu.upb.coderangersandroid.ui.mainpage.viewmodels.UserViewModel
 
 class ProfileFragment : Fragment() {

@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui.mainpage.tabs
+package edu.upb.coderangersandroid.ui.mainpage.tabs.store
 
 import androidx.fragment.app.Fragment
 import android.os.Bundle
@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import edu.upb.coderangersandroid.data.StoreDataSource
 import edu.upb.coderangersandroid.databinding.FragmentStoreBinding
-import edu.upb.coderangersandroid.ui.mainpage.tabs.store.StoreListAdapter
 
 class StoreFragment: Fragment() {
 

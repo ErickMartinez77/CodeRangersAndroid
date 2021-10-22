@@ -25,12 +25,12 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="edu.upb.coderangersandroid.ui.mainpage.tabs.ProfileFragment"
+        android:name="edu.upb.coderangersandroid.ui.mainpage.tabs.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/storeFragment"
-        android:name="edu.upb.coderangersandroid.ui.mainpage.tabs.StoreFragment"
+        android:name="edu.upb.coderangersandroid.ui.mainpage.tabs.store.StoreFragment"
         android:label="fragment_store"
         tools:layout="@layout/fragment_store" />
 </navigation>

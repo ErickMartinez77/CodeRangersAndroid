@@ -7,8 +7,8 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.ui.mainpage.tabs.feed.FeedFragment
-import edu.upb.coderangersandroid.ui.mainpage.tabs.ProfileFragment
-import edu.upb.coderangersandroid.ui.mainpage.tabs.StoreFragment
+import edu.upb.coderangersandroid.ui.mainpage.tabs.profile.ProfileFragment
+import edu.upb.coderangersandroid.ui.mainpage.tabs.store.StoreFragment
 
 class MainPageActivity : AppCompatActivity() {
 
