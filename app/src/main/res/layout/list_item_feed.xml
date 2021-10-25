@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+        <data>
+                <variable
+                    name="post"
+                    type="edu.upb.coderangersandroid.model.Post" />
+        </data>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.mainpage.ItemMainPageActivity">
+
+                <ImageView
+                    android:id="@+id/serviceImage"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="44dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcUrl="@{post.imageUrl}"
+                    tools:src="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/serviceNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@{post.publisher}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.188"
+                    app:layout_constraintStart_toEndOf="@+id/serviceImage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Pintor"/>
+
+                <TextView
+                    android:id="@+id/serviceDescriptionText"
+                    android:layout_width="193dp"
+                    android:layout_height="39dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@{post.shortDescription}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/serviceImage"
+                    app:layout_constraintTop_toBottomOf="@+id/serviceNameText"
+                    app:layout_constraintVertical_bias="0.446"
+                    tools:text="Esta es la descripción del pintor"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

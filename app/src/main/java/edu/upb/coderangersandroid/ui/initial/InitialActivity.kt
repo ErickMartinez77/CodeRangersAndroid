@@ -1,0 +1,24 @@
+package edu.upb.coderangersandroid.ui.initial
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import edu.upb.coderangersandroid.R
+import edu.upb.coderangersandroid.ui.login.LoginActivity
+
+class InitialActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_initial)
+
+        supportActionBar?.hide()
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }, 3000)
+    }
+}
