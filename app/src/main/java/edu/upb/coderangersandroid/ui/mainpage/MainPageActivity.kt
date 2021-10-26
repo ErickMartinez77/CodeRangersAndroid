@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import edu.upb.coderangersandroid.NetworkUtils
 import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.ui.mainpage.tabs.feed.FeedFragment
 import edu.upb.coderangersandroid.ui.mainpage.tabs.profile.ProfileFragment
@@ -30,6 +31,6 @@ class MainPageActivity : AppCompatActivity() {
         val navController = navHostFragment?.navController
         bottomNavigationView.setupWithNavController(navController)
 
-
+        NetworkUtils.updateIsOnline(this)
     }
 }

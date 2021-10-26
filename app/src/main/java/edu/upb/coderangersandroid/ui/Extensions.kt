@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui.activities
+package edu.upb.coderangersandroid.ui
 
 import androidx.annotation.IdRes
 import androidx.appcompat.app.AppCompatActivity

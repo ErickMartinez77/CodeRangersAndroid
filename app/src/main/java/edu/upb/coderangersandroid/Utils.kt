@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui
+package edu.upb.coderangersandroid
 
 
 import android.content.Context

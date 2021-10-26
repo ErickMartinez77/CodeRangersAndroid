@@ -36,6 +36,14 @@ class FeedFragment : Fragment() {
         postViewModel.post.observe(viewLifecycleOwner){
             feedListAdapter.addAll(it)
         }
+
+        //TODO UNA VEZ APLICADO SWIPE REFRESH, DESCOMENTAR ESTAS LINEAS
+//        binding.swiperefresh.setOnRefreshListener {
+//            postViewModel.updateFeed().invokeOnCompletion {
+//                binding.swiperefresh.isRefreshing = false
+//            }
+//        }
+        postViewModel.updateFeed()
     }
 
 

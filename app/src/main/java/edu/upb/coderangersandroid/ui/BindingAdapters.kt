@@ -1,4 +1,4 @@
-package edu.upb.coderangersandroid.ui.activities
+package edu.upb.coderangersandroid.ui
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
