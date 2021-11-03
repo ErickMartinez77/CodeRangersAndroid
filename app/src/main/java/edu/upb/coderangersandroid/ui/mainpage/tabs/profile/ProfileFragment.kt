@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.databinding.FragmentProfileBinding
 import edu.upb.coderangersandroid.ui.mainpage.viewmodels.UserViewModel
 
@@ -34,6 +36,10 @@ class ProfileFragment : Fragment() {
             profileViewModel.editModelEnable.postValue(!editMode)
             userViewModel.updateUser()
         }
-    }
 
+        binding.button.setOnClickListener{
+            val directions = ProfileFragmentDirections.actionGoToFormFragment()
+            findNavController().navigate(directions)
+        }
+    }
 }

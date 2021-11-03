@@ -27,10 +27,19 @@
         android:id="@+id/profileFragment"
         android:name="edu.upb.coderangersandroid.ui.mainpage.tabs.profile.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_go_to_formFragment"
+            app:destination="@id/formFragment" />
+    </fragment>
     <fragment
         android:id="@+id/storeFragment"
         android:name="edu.upb.coderangersandroid.ui.mainpage.tabs.store.StoreFragment"
         android:label="fragment_store"
         tools:layout="@layout/fragment_store" />
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="edu.upb.coderangersandroid.ui.mainpage.form.FormFragment"
+        android:label="fragment_form"
+        tools:layout="@layout/fragment_form" />
 </navigation>

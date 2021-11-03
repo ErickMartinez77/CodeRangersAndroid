@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/George/AndroidStudioProjects/CodeRangersAndroid/app/src/main/res/layout/activity_main_page.xml" value="0.1" />
+        <entry key="..\:/Users/George/AndroidStudioProjects/CodeRangersAndroid/app/src/main/res/layout/fragment_blank.xml" value="0.2318840579710145" />
+        <entry key="..\:/Users/George/AndroidStudioProjects/CodeRangersAndroid/app/src/main/res/layout/fragment_feed.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/George/AndroidStudioProjects/CodeRangersAndroid/app/src/main/res/layout/fragment_form.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/George/AndroidStudioProjects/CodeRangersAndroid/app/src/main/res/layout/fragment_profile.xml" value="0.2" />
+        <entry key="..\:/Users/George/AndroidStudioProjects/CodeRangersAndroid/app/src/main/res/layout/fragment_service_details.xml" value="0.1" />
+        <entry key="..\:/Users/George/AndroidStudioProjects/CodeRangersAndroid/app/src/main/res/layout/fragment_store.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/George/AndroidStudioProjects/CodeRangersAndroid/app/src/main/res/layout/list_item_feed.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/George/AndroidStudioProjects/CodeRangersAndroid/app/src/main/res/layout/list_item_store.xml" value="0.12360688956433637" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.2203125" />
         <entry key="app/src/main/res/layout/fragment_service_details.xml" value="0.2203125" />
