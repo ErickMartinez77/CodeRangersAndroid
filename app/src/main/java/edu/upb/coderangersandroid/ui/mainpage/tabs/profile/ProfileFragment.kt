@@ -37,7 +37,7 @@ class ProfileFragment : Fragment() {
             userViewModel.updateUser()
         }
 
-        binding.button.setOnClickListener{
+        binding.formsButton.setOnClickListener{
             val directions = ProfileFragmentDirections.actionGoToFormFragment()
             findNavController().navigate(directions)
         }

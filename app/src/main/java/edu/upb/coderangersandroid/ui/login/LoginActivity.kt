@@ -2,13 +2,17 @@ package edu.upb.coderangersandroid.ui.login
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.R.layout.activity_login
+import edu.upb.coderangersandroid.databinding.ActivityLoginBinding
+import edu.upb.coderangersandroid.databinding.FragmentFormBinding
 import edu.upb.coderangersandroid.ui.mainpage.MainPageActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -24,8 +28,9 @@ class LoginActivity: AppCompatActivity()  {
     lateinit var editTextEmail : TextView;
     lateinit var editTextPassword : TextView;
     lateinit var btLogin : View;
-    private lateinit var binding : LoginActivity
+    private lateinit var binding : ActivityLoginBinding
     private val loginWithEmailViewModel: LoginWithEmailViewModel by viewModels()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +42,8 @@ class LoginActivity: AppCompatActivity()  {
         editTextEmail = findViewById(R.id.editTextTextEmailAddress)
         editTextPassword = findViewById(R.id.editTextTextPassword)
         supportActionBar?.hide()
+
+
 
         btSignUpFacebook.setOnClickListener {
             val intent = Intent(this, MainPageActivity::class.java)
@@ -50,7 +57,8 @@ class LoginActivity: AppCompatActivity()  {
             val intent = Intent(this, MainPageActivity::class.java)
             startActivity(intent)
         }
-       btLogin.setOnClickListener{
+
+        btLogin.setOnClickListener{
             val username = editTextEmail.text.toString();
             val password = editTextPassword.text.toString()
             loginWithEmailViewModel.login(username,password).

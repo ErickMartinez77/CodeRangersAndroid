@@ -9,6 +9,7 @@ class UserRepository(val network: UserNetworkController) {
     fun login(username: String, password:String): Flow<Any>{
         return flow{
             network.login(username,password)
+            //emit(true)
         }
     }
 }
