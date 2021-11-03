@@ -4,11 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.R.layout.activity_login
 import edu.upb.coderangersandroid.ui.mainpage.MainPageActivity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 
 class LoginActivity: AppCompatActivity()  {
     lateinit var btSignUpFacebook : View;
@@ -43,14 +49,16 @@ class LoginActivity: AppCompatActivity()  {
             val intent = Intent(this, MainPageActivity::class.java)
             startActivity(intent)
         }
-       btLogin.setOnClickListener{
+        btLogin.setOnClickListener{
             val username = editTextEmail.text.toString();
             val password = editTextPassword.text.toString()
-            loginWithEmailViewModel.login(username,password).invokeOnCompletion {
-                val intent = Intent(this, MainPageActivity::class.java)
-                startActivity(intent)
-            }
-
+            loginWithEmailViewModel.login(username,password).
+            catch { Toast.makeText(this@LoginActivity, "Error: Inicio ", Toast.LENGTH_LONG).show() }.
+            onEach { val intent = Intent(this, MainPageActivity::class.java)
+                startActivity(intent) }.
+            launchIn(CoroutineScope(Dispatchers.Main))
         }
+
     }
+
 }
