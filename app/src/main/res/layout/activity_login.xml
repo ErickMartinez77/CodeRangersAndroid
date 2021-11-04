@@ -61,7 +61,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageTwitter"
+        android:id="@+id/imageFacebook"
         android:layout_width="338dp"
         android:layout_height="74dp"
         app:layout_constraintBottom_toTopOf="@+id/imageGoogle"
@@ -76,11 +76,11 @@
         android:id="@+id/imageView8"
         android:layout_width="51dp"
         android:layout_height="47dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageTwitter"
-        app:layout_constraintEnd_toEndOf="@+id/imageTwitter"
+        app:layout_constraintBottom_toBottomOf="@+id/imageFacebook"
+        app:layout_constraintEnd_toEndOf="@+id/imageFacebook"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageTwitter"
-        app:layout_constraintTop_toTopOf="@+id/imageTwitter"
+        app:layout_constraintStart_toStartOf="@+id/imageFacebook"
+        app:layout_constraintTop_toTopOf="@+id/imageFacebook"
         app:layout_constraintVertical_bias="0.6"
         app:srcCompat="@drawable/facebook" />
 
@@ -88,7 +88,7 @@
         android:id="@+id/imageGoogle"
         android:layout_width="338dp"
         android:layout_height="77dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageFacebook"
+        app:layout_constraintBottom_toTopOf="@+id/imageMail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.657"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +97,7 @@
         app:srcCompat="@drawable/box" />
 
     <ImageView
-        android:id="@+id/imageFacebook"
+        android:id="@+id/imageMail"
         android:layout_width="336dp"
         android:layout_height="69dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -125,10 +125,10 @@
         android:layout_width="59dp"
         android:layout_height="46dp"
         android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageFacebook"
-        app:layout_constraintEnd_toEndOf="@+id/imageFacebook"
+        app:layout_constraintBottom_toBottomOf="@+id/imageMail"
+        app:layout_constraintEnd_toEndOf="@+id/imageMail"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageFacebook"
+        app:layout_constraintStart_toStartOf="@+id/imageMail"
         app:srcCompat="@drawable/twitter" />
 
     <TextView
@@ -137,11 +137,11 @@
         android:layout_height="48dp"
         android:text="SignUp with Facebook"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/imageTwitter"
-        app:layout_constraintEnd_toEndOf="@+id/imageTwitter"
+        app:layout_constraintBottom_toBottomOf="@+id/imageFacebook"
+        app:layout_constraintEnd_toEndOf="@+id/imageFacebook"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageTwitter"
-        app:layout_constraintTop_toTopOf="@+id/imageTwitter"
+        app:layout_constraintStart_toStartOf="@+id/imageFacebook"
+        app:layout_constraintTop_toTopOf="@+id/imageFacebook"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -154,19 +154,19 @@
         app:layout_constraintEnd_toEndOf="@+id/imageGoogle"
         app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="@+id/imageGoogle"
-        app:layout_constraintTop_toBottomOf="@+id/imageTwitter"
+        app:layout_constraintTop_toBottomOf="@+id/imageFacebook"
         app:layout_constraintVertical_bias="0.952" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="220dp"
         android:layout_height="36dp"
-        android:text="SignUp with Twitter"
+        android:text="SignUp with Mail and Password"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/imageFacebook"
-        app:layout_constraintEnd_toEndOf="@+id/imageFacebook"
+        app:layout_constraintBottom_toBottomOf="@+id/imageMail"
+        app:layout_constraintEnd_toEndOf="@+id/imageMail"
         app:layout_constraintHorizontal_bias="0.568"
-        app:layout_constraintStart_toStartOf="@+id/imageFacebook"
+        app:layout_constraintStart_toStartOf="@+id/imageMail"
         app:layout_constraintTop_toBottomOf="@+id/imageGoogle" />
 
     <TextView
