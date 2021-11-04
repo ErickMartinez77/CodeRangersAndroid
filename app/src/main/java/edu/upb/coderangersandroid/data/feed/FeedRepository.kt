@@ -31,4 +31,11 @@ class FeedRepository(private val network: FeedNetworkControllerImp, private val 
             }
         }
     }
+
+    fun post(publisher: String, shortDescription: String, imageUrl:String, ownerName: String, phone: String): Flow<Any> {
+        return flow{
+            network.post(publisher, shortDescription, imageUrl, ownerName, phone)
+            emit(network.post(publisher, shortDescription, imageUrl, ownerName, phone))
+        }
+    }
 }

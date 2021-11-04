@@ -64,8 +64,8 @@ class LoginActivity: AppCompatActivity()  {
             loginWithEmailViewModel.login(username,password).
             catch { Toast.makeText(this@LoginActivity, "Error: Inicio ", Toast.LENGTH_LONG).show() }.
             onEach { val intent = Intent(this, MainPageActivity::class.java)
-                startActivity(intent) }.
-            launchIn(CoroutineScope(Dispatchers.Main))
+                startActivity(intent)
+            }.launchIn(CoroutineScope(Dispatchers.Main))
         }
     }
 }
