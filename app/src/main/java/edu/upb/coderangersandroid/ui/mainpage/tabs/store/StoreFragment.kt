@@ -36,11 +36,16 @@ class StoreFragment: Fragment() {
             findNavController().navigate(directions)
         }
 
-        productViewModel.updateStore()
-
         productViewModel.productsList.observe(viewLifecycleOwner) {
             storeListAdapter.addAll(it)
         }
 
+        binding.swipeRefreshStore.setOnRefreshListener {
+            productViewModel.updateStore().invokeOnCompletion {
+                binding.swipeRefreshStore.isRefreshing = false
+            }
+        }
+
+        productViewModel.updateStore()
     }
 }
