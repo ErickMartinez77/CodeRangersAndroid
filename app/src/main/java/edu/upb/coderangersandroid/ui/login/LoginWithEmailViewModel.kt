@@ -15,4 +15,7 @@ class LoginWithEmailViewModel: ViewModel() {
     fun login(username: String, password: String): Flow<Any>{
         return userRepository.login(username,password)
     }
+    fun register(username: String, password: String): Flow<Any>{
+        return userRepository.register(username,password)
+    }
 }

@@ -9,4 +9,6 @@ import retrofit2.http.POST
 interface UserAPI {
     @POST("/login")
     suspend fun login(@Body loginRequest: LoginRequest)
+    @POST("/register")
+    suspend fun register(@Body loginRequest: LoginRequest)
 }

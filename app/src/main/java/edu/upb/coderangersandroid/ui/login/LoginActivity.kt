@@ -9,6 +9,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import edu.upb.coderangersandroid.R
 import edu.upb.coderangersandroid.R.layout.activity_login
+import edu.upb.coderangersandroid.R.layout.register
 import edu.upb.coderangersandroid.ui.mainpage.MainPageActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -17,7 +18,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
 class LoginActivity: AppCompatActivity()  {
-    lateinit var btSignUpFacebook : View;
+    lateinit var btSignUpMail : View;
     lateinit var btSignUpGoogle : View;
     lateinit var btSignUpTwitter : View;
     lateinit var editTextEmail : TextView;
@@ -29,16 +30,16 @@ class LoginActivity: AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(activity_login)
-        btSignUpFacebook = findViewById(R.id.imageFacebook);
+        btSignUpMail = findViewById(R.id.imageMail);
         btSignUpTwitter = findViewById(R.id.imageGoogle);
-        btSignUpGoogle = findViewById(R.id.imageTwitter);
+        btSignUpGoogle = findViewById(R.id.imageFacebook);
         btLogin = findViewById(R.id.btLogin)
         editTextEmail = findViewById(R.id.editTextTextEmailAddress)
         editTextPassword = findViewById(R.id.editTextTextPassword)
         supportActionBar?.hide()
 
-        btSignUpFacebook.setOnClickListener {
-            val intent = Intent(this, MainPageActivity::class.java)
+        btSignUpMail.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
         btSignUpGoogle.setOnClickListener {
@@ -53,7 +54,7 @@ class LoginActivity: AppCompatActivity()  {
             val username = editTextEmail.text.toString();
             val password = editTextPassword.text.toString()
             loginWithEmailViewModel.login(username,password).
-            catch { Toast.makeText(this@LoginActivity, "Error: Inicio ", Toast.LENGTH_LONG).show() }.
+            catch { Toast.makeText(this@LoginActivity, "Error: Password o mail incorrectos", Toast.LENGTH_LONG).show() }.
             onEach { val intent = Intent(this, MainPageActivity::class.java)
                 startActivity(intent) }.
             launchIn(CoroutineScope(Dispatchers.Main))
