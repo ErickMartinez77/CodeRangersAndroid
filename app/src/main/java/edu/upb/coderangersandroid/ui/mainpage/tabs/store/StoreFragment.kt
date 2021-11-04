@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModel
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import edu.upb.coderangersandroid.data.StoreDataSource
 import edu.upb.coderangersandroid.databinding.FragmentStoreBinding
@@ -13,6 +16,7 @@ class StoreFragment: Fragment() {
 
     private val storeListAdapter = StoreListAdapter()
     private lateinit var binding: FragmentStoreBinding
+    private val productViewModel: ProductViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,7 +30,22 @@ class StoreFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.rvStore.adapter = storeListAdapter
         binding.rvStore.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        storeListAdapter.addAll(StoreDataSource.productList)
 
+        storeListAdapter.setOnStoreItemClickListener {
+            val directions = StoreFragmentDirections.actionStoreFragmentToStoreItemDetailsFragment(it)
+            findNavController().navigate(directions)
+        }
+
+        productViewModel.productsList.observe(viewLifecycleOwner) {
+            storeListAdapter.addAll(it)
+        }
+
+        binding.swipeRefreshStore.setOnRefreshListener {
+            productViewModel.updateStore().invokeOnCompletion {
+                binding.swipeRefreshStore.isRefreshing = false
+            }
+        }
+
+        productViewModel.updateStore()
     }
 }
