@@ -11,10 +11,15 @@ import edu.upb.coderangersandroid.model.Product
 class StoreListAdapter: RecyclerView.Adapter<StoreListAdapter.StoreListViewHolder>() {
 
     private var elementList: MutableList<Product> = mutableListOf()
+    private var onStoreItemClickListener: ((product:Product) -> Unit)? = null
 
-    fun addAll(newElementList: MutableList<Product>){
+    fun addAll(newElementList: List<Product>){
         elementList.clear()
         elementList.addAll(newElementList)
+    }
+
+    fun setOnStoreItemClickListener(onStoreItemClickListener: ((product:Product) -> Unit)){
+        this.onStoreItemClickListener = onStoreItemClickListener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoreListViewHolder {
@@ -25,7 +30,7 @@ class StoreListAdapter: RecyclerView.Adapter<StoreListAdapter.StoreListViewHolde
     override fun onBindViewHolder(holder: StoreListViewHolder, position: Int) {
         holder.bind(elementList[position])
         holder.binding.root.setOnClickListener{
-
+            onStoreItemClickListener?.invoke(elementList[position])
         }
     }
 

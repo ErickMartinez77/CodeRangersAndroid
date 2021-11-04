@@ -32,5 +32,19 @@
         android:id="@+id/storeFragment"
         android:name="edu.upb.coderangersandroid.ui.mainpage.tabs.store.StoreFragment"
         android:label="fragment_store"
-        tools:layout="@layout/fragment_store" />
+        tools:layout="@layout/fragment_store" >
+        <action
+            android:id="@+id/action_storeFragment_to_storeItemDetailsFragment"
+            app:destination="@id/storeItemDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeItemDetailsFragment"
+        android:name="edu.upb.coderangersandroid.ui.mainpage.tabs.store.StoreItemDetailsFragment"
+        android:label="StoreItemDetailsFragment"
+        tools:layout="@layout/fragment_store_item_details">
+        <argument
+            android:name="product"
+            app:argType="edu.upb.coderangersandroid.model.Product"/>
+    </fragment>
+
 </navigation>
